@@ -76,12 +76,12 @@ function updatePlots(sample){
                 domain: { x: [0, 1], y: [0,1] },
                 marker: {size: 28, color: "850000"},
                 value: resultm.wfreq,
-                title: "Belly Button Washing Frequency",
+                title: "<b>Belly Button Washing Frequency</b> <br> Scrubs per Week",
                 subtitle: "Scrubs per Week",
                 type: "indicator",
                 mode: "gauge+number",
                 gauge: {
-                    axis: { range: [0, 10]},
+                    axis: { range: [0, 9], tickwidth: 0.5, tickcolor: "black" },
                     bar: { color: "steelblue" },
                     steps: [
                       { range: [0, 1], color: 'rgba(0, 0, 0, 0.5)' },
@@ -92,8 +92,7 @@ function updatePlots(sample){
                       { range: [5, 6], color: 'rgba(249, 168, 37, .5)' },
                       { range: [6, 7], color: 'rgba(110, 154, 22, .5)' },
                       { range: [7, 8], color: 'rgba(110, 154, 22, .5)' },
-                      { range: [8, 9], color: 'rgba(14, 127, 0, .5)' },
-                      { range: [9, 10], color: 'rgba(14, 127, 0, .5)' }
+                      { range: [8, 9], color: 'rgba(14, 127, 0, .5)' }
                     ],
                   }  
                 }
