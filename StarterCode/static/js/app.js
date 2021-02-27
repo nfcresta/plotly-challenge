@@ -84,15 +84,15 @@ function updatePlots(sample){
                     axis: { range: [0, 9], tickwidth: 0.5, tickcolor: "black" },
                     bar: { color: "steelblue" },
                     steps: [
-                      { range: [0, 1], color: 'rgba(0, 0, 0, 0.5)' },
-                      { range: [1, 2], color: 'rgba(0, 0, 0, 0.5)' },
-                      { range: [2, 3], color: 'rgba(183,28,28, .5)' },
-                      { range: [3, 4], color: 'rgba(183,28,28, .5)' },
-                      { range: [4, 5], color: 'rgba(249, 168, 37, .5)' },
-                      { range: [5, 6], color: 'rgba(249, 168, 37, .5)' },
-                      { range: [6, 7], color: 'rgba(110, 154, 22, .5)' },
+                      { range: [0, 1], color: 'rgba(262, 206, 320, .5)' },
+                      { range: [1, 2], color: 'rgba(252, 206, 280, .5)' },
+                      { range: [2, 3], color: 'rgba(242, 206, 240, .5)' },
+                      { range: [3, 4], color: 'rgba(232, 206, 202, .5)' },
+                      { range: [4, 5], color: 'rgba(210, 206, 145, .5))' },
+                      { range: [5, 6], color: 'rgba(202, 209, 95, .5)' },
+                      { range: [6, 7], color: 'rgba(170, 202, 42, .5)' },
                       { range: [7, 8], color: 'rgba(110, 154, 22, .5)' },
-                      { range: [8, 9], color: 'rgba(14, 127, 0, .5)' }
+                      { range: [8,9], color: 'rgba(14, 127, 0, .5)' }
                     ],
                   }  
                 }
