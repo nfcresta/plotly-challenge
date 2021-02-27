@@ -29,6 +29,9 @@ function updatePlots(sample){
         var sampleValues = result.sample_values;
         var otuIDs = result.otu_ids;
         var otuLabels = result.otu_labels;
+        var metaData = data.metadata;
+        var filterArrm = metaData.filter(sampleObject => sampleObject.id == sample);
+        var resultm = filterArrm[0];
 
         // create bar chart
         var trace1 = {
@@ -72,15 +75,35 @@ function updatePlots(sample){
             {
                 domain: { x: [0, 1], y: [0,1] },
                 marker: {size: 28, color: "850000"},
-                value: result.wfreq,
+                value: resultm.wfreq,
                 title: "Belly Button Washing Frequency",
+                subtitle: "Scrubs per Week",
                 type: "indicator",
-                mode: "gauge+number"
-            }
+                mode: "gauge+number",
+                gauge: {
+                    axis: { range: [0, 10]},
+                    bar: { color: "steelblue" },
+                    steps: [
+                      { range: [0, 1], color: 'rgba(0, 0, 0, 0.5)' },
+                      { range: [1, 2], color: 'rgba(0, 0, 0, 0.5)' },
+                      { range: [2, 3], color: 'rgba(183,28,28, .5)' },
+                      { range: [3, 4], color: 'rgba(183,28,28, .5)' },
+                      { range: [4, 5], color: 'rgba(249, 168, 37, .5)' },
+                      { range: [5, 6], color: 'rgba(249, 168, 37, .5)' },
+                      { range: [6, 7], color: 'rgba(110, 154, 22, .5)' },
+                      { range: [7, 8], color: 'rgba(110, 154, 22, .5)' },
+                      { range: [8, 9], color: 'rgba(14, 127, 0, .5)' },
+                      { range: [9, 10], color: 'rgba(14, 127, 0, .5)' }
+                    ],
+                  }  
+                }
         ];
 
         var layout = {
-            line: {color: "600000"}
+            line: {color: "600000"},
+            wdith: 600,
+            height: 500,
+            margin: { t: 0, b: 0 }
         };
 
         Plotly.newPlot("gauge", data, layout);
