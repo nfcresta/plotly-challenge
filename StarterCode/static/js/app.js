@@ -90,5 +90,3 @@ function optionChanged(newID){
 }
 
 init();
-
-
