@@ -69,10 +69,11 @@ function updatePlots(sample){
     });
 }
 
+// demographics panel
 function updateMetadata(sample){
     d3.json("../../samples.json").then(data => {
-        var metadata = data.metadata;
-        var filterArr = metadata.filter(sampleObject => sampleObject.id === sample);
+        var metaData = data.metadata;
+        var filterArr = metaData.filter(sampleObject => sampleObject.id == sample);
         var result = filterArr[0];
         var demoPanel = d3.select("#sample-metadata");
         demoPanel.html("");
@@ -80,6 +81,12 @@ function updateMetadata(sample){
             demoPanel.append("h6").text(`${key}: ${value}`)
         });
     });
+}
+
+// complete optionChanged function
+function optionChanged(newID){
+    updatePlots(newID);
+    updateMetadata(newID);
 }
 
 init();
