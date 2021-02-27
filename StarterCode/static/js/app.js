@@ -66,6 +66,24 @@ function updatePlots(sample){
         };
 
         Plotly.newPlot("bubble", data, layout);
+
+        // BONUS create gauge
+        var data = [
+            {
+                domain: { x: [0, 1], y: [0,1] },
+                marker: {size: 28, color: "850000"},
+                value: result.wfreq,
+                title: "Belly Button Washing Frequency",
+                type: "indicator",
+                mode: "gauge+number"
+            }
+        ];
+
+        var layout = {
+            line: {color: "600000"}
+        };
+
+        Plotly.newPlot("gauge", data, layout);
     });
 }
 
