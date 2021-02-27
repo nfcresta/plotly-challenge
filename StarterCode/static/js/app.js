@@ -82,7 +82,7 @@ function updatePlots(sample){
                 mode: "gauge+number",
                 gauge: {
                     axis: { range: [0, 9], tickwidth: 0.5, tickcolor: "black" },
-                    bar: { color: "steelblue" },
+                    bar: { color: "grey" },
                     steps: [
                       { range: [0, 1], color: 'rgba(262, 206, 320, .5)' },
                       { range: [1, 2], color: 'rgba(252, 206, 280, .5)' },
