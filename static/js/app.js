@@ -21,6 +21,7 @@ function init(){
     });
 }
 
+// create a function to update a build plots for any ID
 function updatePlots(sample){
     d3.json("samples.json").then(data => {
         var samples = data.samples;
