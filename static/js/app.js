@@ -7,7 +7,7 @@ function init(){
         // create list of id names
         var IDs = data.names;
 
-        // push id's to dropdown menu
+        // push id's to dropdown mene
         for (var i=0; i <= IDs.length; i++){
             var dropdownMenu = d3.select("#selDataset");
             var options = dropdownMenu.append("option");
