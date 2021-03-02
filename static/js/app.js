@@ -92,7 +92,7 @@ function updatePlots(sample){
                       { range: [5, 6], color: 'rgba(202, 209, 95, .5)' },
                       { range: [6, 7], color: 'rgba(170, 202, 42, .5)' },
                       { range: [7, 8], color: 'rgba(110, 154, 22, .5)' },
-                      { range: [8,9], color: 'rgba(14, 127, 0, .5)' }
+                      { range: [8, 9], color: 'rgba(14, 127, 0, .5)' }
                     ],
                   }  
                 }
