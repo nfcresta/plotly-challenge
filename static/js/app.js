@@ -9,8 +9,8 @@ function init(){
 
         // push id's to dropdown menu
         for (var i=0; i <= IDs.length; i++){
-            dropdownMenu = d3.select("#selDataset");
-            options = dropdownMenu.append("option");
+            var dropdownMenu = d3.select("#selDataset");
+            var options = dropdownMenu.append("option");
             options.text(IDs[i]);
         }
 
@@ -130,3 +130,5 @@ function optionChanged(newID){
 }
 
 init();
+
+app.use("/static/js", express.static('./static/js/'));
