@@ -1,6 +1,6 @@
 // initialize function and use d3 to read in samples.json
 function init(){
-    d3.json("../../samples.json").then(data => {
+    d3.json("samples.json").then(data => {
         
         console.log(data);
 
@@ -24,7 +24,7 @@ function init(){
 function updatePlots(sample){
     d3.json("../../samples.json").then(data => {
         var samples = data.samples;
-        var filterArr = samples.filter(sampleObject => sampleObject.id === sample);
+        var filterArr = samples.filter(sampleObject => sampleObject.id == sample);
         var result = filterArr[0];
         var sampleValues = result.sample_values;
         var otuIDs = result.otu_ids;
