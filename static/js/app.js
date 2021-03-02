@@ -1,6 +1,6 @@
 // initialize function and use d3 to read in samples.json
 function init(){
-    d3.json("samples.json").then(data => {
+    d3.json("../../samples.json").then(data => {
         
         console.log(data);
 
