@@ -130,5 +130,3 @@ function optionChanged(newID){
 }
 
 init();
-
-app.use("/static/js", express.static('./static/js/'));
