@@ -1,6 +1,6 @@
 // initialize function and use d3 to read in samples.json
 function init(){
-    d3.json("../../samples.json").then(data => {
+    d3.json("samples.json").then(data => {
         
         console.log(data);
 
@@ -22,7 +22,7 @@ function init(){
 }
 
 function updatePlots(sample){
-    d3.json("../../samples.json").then(data => {
+    d3.json("samples.json").then(data => {
         var samples = data.samples;
         var filterArr = samples.filter(sampleObject => sampleObject.id == sample);
         var result = filterArr[0];
@@ -111,7 +111,7 @@ function updatePlots(sample){
 
 // demographics panel
 function updateMetadata(sample){
-    d3.json("../../samples.json").then(data => {
+    d3.json("samples.json").then(data => {
         var metaData = data.metadata;
         var filterArr = metaData.filter(sampleObject => sampleObject.id == sample);
         var result = filterArr[0];
